@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { ApodComponent } from './apod/apod.component';
 
 import { NgApodConfig } from './config/ng-apod.config';
+import { SafePipeModule } from 'safe-pipe';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { NgApodConfig } from './config/ng-apod.config';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SafePipeModule
   ],
   providers: [
     NgApodConfig
