@@ -10,6 +10,8 @@ import { ApodComponent } from './apod/apod.component';
 
 import { NgApodConfig } from './config/ng-apod.config';
 import { SafePipeModule } from 'safe-pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { SafePipeModule } from 'safe-pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SafePipeModule
+    SafePipeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     NgApodConfig,
